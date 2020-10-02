@@ -16,7 +16,7 @@
 			"under 18": {},"18 - 24": {},"25 - 34": {},"35 - 44": {},"45 - 54": {},"55 - 64": {},"65 and over": {} 
 		}
 		window.onload = function() {
-			var ageSel = document.getElementById("age");
+			var ageSel = document.getElementById("age_field");
 			for (var x in subjectAge) {
 				ageSel.options[ageSel.options.length] = new Option(x, x);
 			}
@@ -28,25 +28,25 @@
 		<h2>Volunteer Form</h2>
 	</div>
 	<p><strong>My Info</strong></p>
-		<form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="POST">
+		<form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
 			<fieldset>
 			<div class="box">
 				<label for="firstname">First name:</label><br>
-				<input type="text" id="firstname" name="firstname" value=""><br>
+				<input type="text" id="first_name_field" name="first_name_field" value=""><br>
 				<label for="lastname">Last name:</label><br>
-				<input type="text" id="lastname" name="lastname" value=""><br>
+				<input type="text" id="last_name_field" name="last_name_field" value=""><br>
 				<label for="phone">Phone:</label><br>
-				<input type="tel" id="phone" name="phone" value=""><br>
+				<input type="tel" id="phone_field" name="phone_field" value=""><br>
 				<label for="email">Email:</label><br>
-				<input type="email" id="email" name="email" value=""><br>
+				<input type="email" id="email_field" name="email_field" value=""><br>
 				
-				<input type="radio" id="male" name="gender" value="male">
+				<input type="radio" id="male" name="gender_field" value="male">
 				<label for="male">Male</label><br>
-				<input type="radio" id="female" name="gender" value="female">
+				<input type="radio" id="female" name="gender_field" value="female">
 				<label for="female">Female</label><br>
 				<br>
 				
-				Age: <select name="age" id="age">
+				Age: <select name="age_field" id="age_field">
 						<option value="" selected="selected">Select Age</option>
 					</select>
 					<br>
@@ -56,25 +56,25 @@
 		<p><strong>My Availability</strong></p>
 			<div class="box">
 				<p>Days Available:</p>
-					<input type="checkbox" id="day1" name="available" value="Monday">
+					<input type="checkbox" id="day1" name="available_field[]" value="Monday">
 					<label for="day1"> Monday</label><br>
-					<input type="checkbox" id="day2" name="available" value="Tuesday">
+					<input type="checkbox" id="day2" name="available_field[]" value="Tuesday">
 					<label for="day2"> Tuesday</label><br>
-					<input type="checkbox" id="day3" name="available" value="Wednesday">
+					<input type="checkbox" id="day3" name="available_field[]" value="Wednesday">
 					<label for="day3"> Wednesday</label><br>
-					<input type="checkbox" id="day4" name="available" value="Thursday">
+					<input type="checkbox" id="day4" name="available_field[]" value="Thursday">
 					<label for="day4"> Thursday</label><br>
-					<input type="checkbox" id="day5" name="available" value="Friday">
+					<input type="checkbox" id="day5" name="available_field[]" value="Friday">
 					<label for="day5"> Friday</label><br>
-					<input type="checkbox" id="day6" name="available" value="Saturday">
+					<input type="checkbox" id="day6" name="available_field[]" value="Saturday">
 					<label for="day6"> Saturday</label><br>
-					<input type="checkbox" id="day7" name="available" value="Sunday">
+					<input type="checkbox" id="day7" name="available_field[]" value="Sunday">
 					<label for="day7"> Sunday</label><br><br>
 					
 					<p>Any Comments?</p>
-					<textarea name="comments" style="width: 600px; height: 200px;"></textarea>
+					<textarea name="comments_field" style="width: 600px; height: 200px;"></textarea>
 					<br><br>
-					<input type="hidden" id="hidden" name="hidden" value="Fredrick Mutnansky">
+					<input type="hidden" name="hidden_field" value="Fredrick Mutnansky">
 					<input type="submit" value="Submit">
 			</div>
 			</fieldset>
